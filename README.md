@@ -1,11 +1,5 @@
 # Project-Nayan
 
-Perfecto. Ajustamos entonces:
-
-- Movimiento más rápido
-- 4 direcciones (arriba, abajo, izquierda, derecha)
-- Placeholders por ahora (cuando tengas los sprites solo cambiamos la parte visual)
-
 ### Script actualizado (más rápido + 4 direcciones)
 
 Reemplaza el script anterior por este:
@@ -83,13 +77,3 @@ Cuando tengas los sprites de 4 direcciones, lo ideal es cambiar el `Sprite2D` po
 (El código de arriba ya está preparado para eso, solo hay que descomentar y ajustar).
 
 ---
-
-### Prueba esto y dime:
-
-1. ¿La velocidad de 180 se siente bien o la quieres aún más rápida / un poco más lenta?
-2. ¿Prefieres que el personaje se frene más seco o que se deslice un poco al soltar el teclado? (puedo ajustar friction)
-3. ¿Quieres que cuando camine en diagonal mire hacia la dirección horizontal o vertical? (ahora prioriza la más fuerte)
-
-Cuando el movimiento te guste, el siguiente paso natural es el **sistema de interacción** (detectar cuando estás cerca de un NPC o de un objeto interactuable y poder pulsar “E”).
-
-¿Lo dejamos así o ajustamos algo más del movimiento antes de seguir?
