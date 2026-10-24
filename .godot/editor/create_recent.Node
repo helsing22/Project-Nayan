@@ -1,0 +1,13 @@
+Label
+CollisionShape2D
+Area2D
+Sprite2D
+CharacterBody2D
+Button
+VBoxContainer
+PanelContainer
+CanvasLayer
+StaticBody2D
+ProgressBar
+Camera2D
+AnimatedSprite2D

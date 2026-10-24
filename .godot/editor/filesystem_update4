@@ -1,0 +1,15 @@
+res://Scenes/_world_.tscn
+res://Configuración de los nuevos Sistemas_261023_164355.txt
+res://Scenes/npcs/UniversalNPC.tscn
+res://Scripts/npcs/UniversalNPC.gd
+res://resource/DialogeData/universal.tres
+res://resource/DialogueEntry/dialogue_test_01.tres
+res://resource/DialogueSet/clara_dialogues.tres
+res://Scenes/ui/DialogeUI.tscn
+res://Scripts/dialogue/dialoge_ui.gd
+res://autoloads/TimeManager.gd
+res://Scenes/character.tscn
+res://Scenes/Clock/clock_label.gd
+res://Scenes/ui/DialogueUI.tscn
+res://resource/dialogues/new_resource.tres
+res://resource/dialogues/clara_dialogues.tres

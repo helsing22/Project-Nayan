@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://x7fqq1g1yprt"]
+
+[ext_resource type="Script" uid="uid://d08q6mge1klon" path="res://Scripts/character.gd" id="1_ushfy"]
+[ext_resource type="Texture2D" uid="uid://bp0seibj4jjqx" path="res://Assets/icon.svg" id="2_owm7s"]
+[ext_resource type="Script" uid="uid://duigsbj13j4jf" path="res://Scenes/Clock/clock_label.gd" id="3_owm7s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13qdw"]
+radius = 24.020824
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ushfy"]
+bg_color = Color(0, 0, 0, 0.5882353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_owm7s"]
+bg_color = Color(5.390644e-06, 0.7272253, 0.124640636, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_13qdw"]
+font_size = 27
+
+[node name="Player" type="CharacterBody2D" unique_id=216505250]
+script = ExtResource("1_ushfy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1622398331]
+scale = Vector2(0.1875, 0.171875)
+texture = ExtResource("2_owm7s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1336853918]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920225513]
+shape = SubResource("CircleShape2D_xrivr")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=155190084]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1579171629]
+shape = SubResource("CircleShape2D_13qdw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=457592178]
+zoom = Vector2(2.7, 2.7)
+position_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1333632845]
+
+[node name="Progress bar" type="ProgressBar" parent="CanvasLayer" unique_id=1438947732 groups=["stamina_bar"]]
+offset_right = 250.0
+offset_bottom = 25.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ushfy")
+theme_override_styles/fill = SubResource("StyleBoxFlat_owm7s")
+max_value = 50.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1354467564 groups=["interact_prompt"]]
+offset_left = 336.0
+offset_top = 597.0
+offset_right = 836.0
+offset_bottom = 647.0
+text = "Press F to interact"
+label_settings = SubResource("LabelSettings_13qdw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClockLabel" type="Label" parent="CanvasLayer" unique_id=1156646995 groups=["clock_label"]]
+offset_left = 956.0
+offset_right = 1117.0
+offset_bottom = 23.0
+text = "Spring - Day 1 - 08:00"
+horizontal_alignment = 2
+script = ExtResource("3_owm7s")
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://d278dco7hq1n4"]
+
+[ext_resource type="Script" uid="uid://rnjrlb8d5oup" path="res://Scripts/dialogue/dialoge_ui.gd" id="1_m10gc"]
+
+[node name="DialogueUI" type="CanvasLayer" unique_id=1313885911 groups=["dialogue_ui"]]
+script = ExtResource("1_m10gc")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1914086125]
+offset_left = 325.0
+offset_top = 419.0
+offset_right = 830.0
+offset_bottom = 555.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=201051572]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=599553699]
+layout_mode = 2
+
+[node name="DialogueText" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1680396922]
+layout_mode = 2
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1738648265]
+layout_mode = 2
+
+[node name="ChoiceButton1" type="Button" parent="PanelContainer/VBoxContainer/ChoicesContainer" unique_id=746277713]
+layout_mode = 2
+
+[node name="ChoiceButton2" type="Button" parent="PanelContainer/VBoxContainer/ChoicesContainer" unique_id=1553485009]
+layout_mode = 2
+
+[node name="ChoiceButton3" type="Button" parent="PanelContainer/VBoxContainer/ChoicesContainer" unique_id=918603463]
+layout_mode = 2

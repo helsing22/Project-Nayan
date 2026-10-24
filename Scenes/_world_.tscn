@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dbhu3vv434fom"]
+
+[ext_resource type="Texture2D" uid="uid://d2pfdd7yldekw" path="res://Assets/725605.png" id="1_6otv2"]
+[ext_resource type="PackedScene" uid="uid://x7fqq1g1yprt" path="res://Scenes/character.tscn" id="2_8wa7f"]
+[ext_resource type="PackedScene" uid="uid://cmbyjuyyjgexi" path="res://Scenes/interactable_object.tscn" id="3_8wa7f"]
+[ext_resource type="PackedScene" uid="uid://bwq1p4wxfhm8d" path="res://Scenes/npcs/UniversalNPC.tscn" id="4_7awon"]
+
+[node name="_World_" type="Node2D" unique_id=1634912281]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=4438484]
+texture = ExtResource("1_6otv2")
+
+[node name="Character" parent="." unique_id=216505250 instance=ExtResource("2_8wa7f")]
+
+[node name="interactableObject" parent="." unique_id=473085726 instance=ExtResource("3_8wa7f")]
+position = Vector2(132, 72)
+
+[node name="CharacterBody2D" parent="." unique_id=37525940 instance=ExtResource("4_7awon")]

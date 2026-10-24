@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://gn0phblde03e"]
+
+[ext_resource type="Script" uid="uid://c3o2wpjvsiiec" path="res://Scripts/dialogue/DialogueData.gd" id="1_w6fwt"]
+
+[resource]
+script = ExtResource("1_w6fwt")
+speaker_name = "Vecina Clara"
+text = "¡Hola! Qué alegría verte. ¿De verdad vas a reabrir la cafetería de tu abuela?"
+choices = Array[String](["Sí", "Todavía no lo sé", "Solo estoy mirando"])
+metadata/_custom_type_script = "uid://c3o2wpjvsiiec"

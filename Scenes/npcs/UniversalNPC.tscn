@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bwq1p4wxfhm8d"]
+
+[ext_resource type="Script" uid="uid://bqml3uqb7x3vq" path="res://Scripts/npcs/UniversalNPC.gd" id="1_cowbh"]
+[ext_resource type="Resource" uid="uid://neq8nv264lsd" path="res://resource/dialogues/clara_dialogues.tres" id="2_l8o3p"]
+[ext_resource type="Texture2D" uid="uid://bp0seibj4jjqx" path="res://Assets/icon.svg" id="2_y5xag"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13qdw"]
+radius = 20.0
+
+[node name="UniversalNPC" type="CharacterBody2D" unique_id=37525940]
+script = ExtResource("1_cowbh")
+dialogue_set = ExtResource("2_l8o3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1198056492]
+shape = SubResource("CircleShape2D_xrivr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=847949287]
+scale = Vector2(0.10937499, 0.10937499)
+texture = ExtResource("2_y5xag")
+
+[node name="InteractionDetector" type="Area2D" parent="." unique_id=218187885]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector" unique_id=1175710802]
+shape = SubResource("CircleShape2D_13qdw")

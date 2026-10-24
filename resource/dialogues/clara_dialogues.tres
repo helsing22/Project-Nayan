@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NPCDialogueSet" format=3 uid="uid://neq8nv264lsd"]
+
+[ext_resource type="Script" uid="uid://dciogvu6un2c4" path="res://Scripts/dialogue/DialogueEntry.gd" id="1_ttm5u"]
+[ext_resource type="Resource" uid="uid://c3e28ao1lpsbb" path="res://resource/dialogues/new_resource.tres" id="2_7ybvd"]
+[ext_resource type="Script" uid="uid://ctl4qf3kcwshc" path="res://Scripts/dialogue/NPCDialogueSet.gd" id="3_ciaj0"]
+
+[resource]
+script = ExtResource("3_ciaj0")
+entries = Array[ExtResource("1_ttm5u")]([ExtResource("2_7ybvd")])
+metadata/_custom_type_script = "uid://ctl4qf3kcwshc"

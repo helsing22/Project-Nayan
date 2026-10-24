@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cmbyjuyyjgexi"]
+
+[ext_resource type="Texture2D" uid="uid://bp0seibj4jjqx" path="res://Assets/icon.svg" id="1_0vujv"]
+[ext_resource type="Script" uid="uid://bbiujwofdw1cf" path="res://Scenes/interactable_object.gd" id="1_pj2rk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+
+[node name="interactableObject" type="Area2D" unique_id=742025797 groups=["interactable"]]
+script = ExtResource("1_pj2rk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1199370465]
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=304534035]
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("1_0vujv")
